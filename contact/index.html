@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<h1 id="contact">Contact Form</h1>
+
 <body>
+
+<h1 id="contact">Contact Form</h1>
 
 <nav>
     <ul>
@@ -18,11 +20,14 @@
 
 <form action="mailto:bqgrunbaum@gmail.com" method="POST" enctype="text/plain">
     <label for="email">Email</label>
-    <input type="email" name="email">
+    <input type="email" id="email" name="email">
+
     <label for="subject">Subject</label>
-    <input name = "subject">
+    <input type="text" id="subject" name="subject">
+
     <label for="body">Message</label>
-    <textarea name = "body">Message</textarea>
+    <textarea id="body" name="body" placeholder="Message"></textarea>
+
     <button type="submit">Submit</button>
 </form>
 
