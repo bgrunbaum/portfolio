@@ -22,7 +22,7 @@
         "year": "2026",
         "image": "../images/ede_present.jpg",
         "description": "This is a photo of me and my groupmates presenting our research\n        at the PREDOC.org Economic Undergraduate Research Conference this \n        past summer: more to come about it soon!"
-    }
+    },
     {
         "title": "Power Blackout Prediction Project",
         "year": 2026,
@@ -70,6 +70,6 @@
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "year": 2025,
         "description": "Accusantium illo, possimus cupiditate quo id est dolore harum corporis distinctio repudiandae et voluptas magnam, quam consequuntur! Quam quos nemo dolores fugit quaerat obcaecati nesciunt, voluptatum, reiciendis sit deserunt voluptatem."
-    },
+    }
     
 ]
