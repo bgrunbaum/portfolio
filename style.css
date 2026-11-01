@@ -93,10 +93,15 @@ img {
 
 .projects article {
   display: grid;
-  grid-row: span 3;
+  grid-row: span 4;
   grid-template-rows: subgrid;
   gap: 1em;
   margin: 0;
+}
+
+.project-year {
+  font-family: Baskerville, "Baskerville Old Face", Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
 }
 
 .projects h2 {
@@ -172,4 +177,85 @@ time {
 #profile-stats dd {
   grid-row: 2;
   margin: 0; 
+}
+
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.projects-pie-plot {
+  width: 12em;          
+  max-width: 100%;
+  flex-shrink: 0;
+  margin-block: 0;
+  overflow: visible;
+  gap: 1em;
+}
+
+.legend {
+  list-style: none;
+  margin: 0;           
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid grey;
+  flex: 1
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+path.selected {
+  fill: var(--color);
+}
+
+path {
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+.legend-item {
+  cursor: pointer;
+}
+
+.searchBar{
+  margin-bottom: 2em;
 }
