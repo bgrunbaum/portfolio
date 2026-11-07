@@ -25,7 +25,8 @@ let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'cv/', title: 'CV'},
-  { url: 'contact/', title: "Contact Form"}
+  { url: 'contact/', title: "Contact Form"},
+  { url: 'meta/', title: "Meta"}
   // add the rest of your pages here
 ];
 

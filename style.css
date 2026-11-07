@@ -259,3 +259,84 @@ path {
 .searchBar{
   margin-bottom: 2em;
 }
+
+dl.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+dl.stats dt {
+  grid-row: 1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: gray;
+}
+
+dl.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.gridlines line {
+  stroke: currentColor;
+  stroke-opacity: 0.15;
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; /* dt in column 1, dd in column 2 */
+  gap: 0.25em 1em;
+  margin: 0;
+}
+
+dl.info dt {
+  margin: 0;
+  font-size: 0.85em;
+  color: gray; /* labels less prominent */
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 600; /* values stand out */
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
