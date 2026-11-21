@@ -9,11 +9,25 @@
 <body>
   <h1>Meta</h1>
 
+  <div class="slider-container">
+    <label for="commit-progress">
+      Show commits until:
+      <input type="range" id="commit-progress" min="0" max="100" value="100" />
+      <time id="commit-time"></time>
+    </label>
+  </div>
+
   <div id="stats"></div>
 
-  <div id="chart"></div>
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
+  <div id="scrolly-1">
+    <div id="scatter-story">some filler text here</div>
+    <div id="scatter-plot">
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+      <dl id="files"></dl>
+    </div>
+  </div>
 
   <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
@@ -21,9 +35,8 @@
 
     <dt>Date</dt>
     <dd id="commit-date"></dd>
-
-    <!-- Add: Time, author, lines edited -->
   </dl>
+
 
   <script type="module" src="main.js"></script>
   <script type="module" src="../global.js"></script>
